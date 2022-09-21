@@ -1,0 +1,15 @@
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/NewAdvancedCanculator.csproj.AssemblyReference.cache
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/NewAdvancedCanculator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/NewAdvancedCanculator.AssemblyInfoInputs.cache
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/NewAdvancedCanculator.AssemblyInfo.cs
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/NewAdvancedCanculator.csproj.CoreCompileInputs.cache
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/bin/Debug/net6.0/NewAdvancedCanculator
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/bin/Debug/net6.0/NewAdvancedCanculator.deps.json
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/bin/Debug/net6.0/NewAdvancedCanculator.runtimeconfig.json
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/bin/Debug/net6.0/NewAdvancedCanculator.dll
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/bin/Debug/net6.0/NewAdvancedCanculator.pdb
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/NewAdvancedCanculator.dll
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/refint/NewAdvancedCanculator.dll
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/NewAdvancedCanculator.pdb
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/NewAdvancedCanculator.genruntimeconfig.cache
+/Users/marisabelbecker/RiderProjects/NewAdvancedCanculator/NewAdvancedCanculator/obj/Debug/net6.0/ref/NewAdvancedCanculator.dll
