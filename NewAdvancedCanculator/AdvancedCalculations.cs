@@ -1,6 +1,5 @@
 using System;
 
-
 namespace NewAdvancedCalculator;
 
 public class AdvancedCalculations : SimpleCalculations
