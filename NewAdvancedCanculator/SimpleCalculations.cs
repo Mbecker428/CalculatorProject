@@ -4,71 +4,97 @@ namespace NewAdvancedCalculator;
 
 public class SimpleCalculations
 {
-    public double FirstNumber(string firstNumber)
+    //This method validates the number inputs
+    public double inputValidation(string value)
     {
-        double a;
-        while (double.TryParse(firstNumber, out a))
+        double j;
+        while (!double.TryParse(value, out j))
         {
-            Console.WriteLine(a);
-            break;
+            Console.Write("Wrong input please try again: ");
+            value = Console.ReadLine();
         }
-
-        return a;
+        return j;
     }
 
-    public double SecondNumber(string secondNumber)
-    {
-        double b;
-        while (double.TryParse(secondNumber, out b))
-        {
-            Console.WriteLine(b);
-            break;
-        }
-
-        return b;
-    }
-
+    //This method validates the operators
     public string Operator(string calcSymbol)
     {
         bool dContinue = true;
         while (dContinue)
         {
-            Console.Write("Please enter the operator and press enter: ");
-            calcSymbol = Convert.ToString(Console.ReadLine());
             if (calcSymbol == "+" || calcSymbol == "-" || calcSymbol == "*" || calcSymbol == "/")
-            {
-                Console.WriteLine("your operator symbol is" + calcSymbol);
                 dContinue = false;
-
-            }
             else
             {
-                Console.WriteLine("That's not an operator. Try again");
+                dContinue = true;
+                Console.WriteLine(("That's not an operator. Try again: "));
+                calcSymbol = Convert.ToString((Console.ReadLine()));
             }
         }
-
         return calcSymbol;
     }
+    
+    //This method validates the menu choices
+    public string choiceValidation(string choice)
+     {
+         bool fContinue = true;
+         while (fContinue)
+         {
+             if (choice == "1" || choice == "2")
+                 fContinue = false;
+             else
+             {
+                 fContinue = true;
+                 Console.WriteLine(("That's not a correct option. Try again: "));
+                 choice = Convert.ToString((Console.ReadLine()));
+             }
+         }
+         return choice;
+     }
+    
+    //This method validates the exit answer
+    public string exitValidation(string choice)
+    {
+        bool gContinue = true;
+        while (gContinue)
+        {
+            if (choice == "Y" || choice == "y" || choice == "N" || choice == "n")
+                gContinue = false;
+            else
+            {
+                gContinue = true;
+                Console.WriteLine(("That's not a correct option. Try again: "));
+                choice = Convert.ToString((Console.ReadLine()));
+            }
+        }
+        return choice;
+    }
 
-    public double Calculation(double num1, double num2, string calcSymbol)
+    //This method calculates the simple operations
+    public double simpleCalculation(double num1, double num2, string calcSymbol)
     {
         double answer = 0;
         switch (calcSymbol)
         {
             case "-":
-                answer = (num1 - num2);
+                answer = Math.Round((num1 - num2), 2);
                 Console.WriteLine($"Your Subtraction result is: {answer}");
                 break;
             case "+":
-                answer = num1 + num2;
+                answer = Math.Round((num1 + num2), 2);
                 Console.WriteLine($"Your Addition result is: {answer}");
                 break;
             case "/":
-                answer = num1 / num2;
+                while (num2 == 0)
+                {
+                    Console.WriteLine("Please enter a non-zero number");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+                }
+                answer = Math.Round((num1 / num2), 2);
                 Console.WriteLine($"Your division result is: {answer}");
                 break;
             case "*":
-                answer = num1 * num2;
+                answer = Math.Round((num1 * num2), 2);
                 Console.WriteLine($"Your Multiplication result is: {answer}");
                 break;
             default:
@@ -76,52 +102,6 @@ public class SimpleCalculations
                 break;
         }
         return answer;
-    }
-
-    //FOR OPTION ONLY 2 -this method is to make the user enter the tip percentage they want
-    public string TipType(string tipRate)
-    {
-        bool mContinue = true;
-        while (mContinue)
-        {
-            Console.Write("Please type your tip rate and press enter. Your rates are 18%, 20% and 25%");
-            tipRate = Convert.ToString(Console.ReadLine());
-            if (tipRate == "18%" || tipRate == "20%" || tipRate == "25%")
-            {
-                mContinue = false;
-            }
-            else
-            {
-                Console.WriteLine("That's not a valid tip rate. Try again");
-            }
-        }
-
-        return tipRate;
-    }
-
-    //FOR OPTION 2 ONLY -this method calculates the tip amount
-    public double TipCalculation(double amount1, string tipRate)
-    {
-        double tipAmount = 0;
-        switch (tipRate)
-        {
-            case "18%":
-                tipAmount = amount1 * .18;
-                Console.WriteLine($"Your tip amoount is: {tipAmount}");
-                break;
-            case "20%":
-                tipAmount = amount1 * .20;
-                Console.WriteLine($"Your tip amoount is: {tipAmount}");
-                break;
-            case "25%":
-                tipAmount = amount1 * .25;
-                Console.WriteLine($"Your tip amoount is: {tipAmount}");
-                break;
-            default:
-                Console.WriteLine("Incorrect percentage number");
-                break;
-        }
-        return tipAmount;
     }
 }
 

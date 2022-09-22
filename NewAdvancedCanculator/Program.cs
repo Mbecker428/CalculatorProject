@@ -1,75 +1,73 @@
 ﻿using System;
 
+
 namespace NewAdvancedCalculator
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            double num1 = 0,
-                   num2 = 0;
-            //amount1 = 0;
-            //int opt1 = 0;
-
-            string? calcSymbol = "";
-            //tipRate = "";
-            //string? calcSymbol = "";
-            //string calcSymbol;
-
-            ConsoleKeyInfo status;
-
             while (true)
             {
-                //double answer;
-                //double tipAmount;
-
-                Console.Write("*** WELCOME TO THE ADVANCED CALCULATOR! ***\n\n");
-                Console.Write("Main Menu:\n");
-                Console.Write("1. Calculates operations such as addition,");
-                Console.Write("subtraction, multiplication, and division.\n");
-                Console.Write("2. Calculates tips.\n");
+                Console.Write("-------------------------------------------\n");
+                Console.Write("*** WELCOME TO THE ADVANCED CALCULATOR! ***\n");
+                Console.Write("-------------------------------------------\n");
+                Console.Write("This calculator allows you to perform ");
+                Console.Write("operations \nsuch as Addition, Subtraction, ");
+                Console.Write("Multiplication, \nDivision and Tip calculations.");
+                Console.Write("\n\n");
+                Console.Write("Main Menu:\n\n");
+                Console.Write("1. Simple Calculations\n");
+                Console.Write("Calculates addition, subtraction, ");
+                Console.Write("multiplication, or division.\n\n");
+                Console.Write("2. Tip Calculations\n");
+                Console.Write("Calculates 18%, 20%, or 25% tip percentages. \n\n");
                 Console.Write("Which calculation would you like to perform?\n");
                 Console.Write("Type 1 or 2 and press enter.\n");
                 Console.Write("");
 
-                int option_1 = Convert.ToInt32(Console.ReadLine());
-                int option_2 = Convert.ToInt32(Console.ReadLine());
-                //Input validation
-                if (option_1 == 1 && option_1 < 3 && option_1 > 0)
+                SimpleCalculations calculate = new SimpleCalculations();
+                AdvancedCalculations calc = new AdvancedCalculations();
+                string menuOption = calculate.choiceValidation(Console.ReadLine());
+                
+                if (menuOption == "1")
                 {
-
                     Console.Write("Please enter the first number and press enter: ");
-                    string number1 = Console.ReadLine();
+                        double firstValue = calculate.inputValidation(Console.ReadLine());
                     
                     Console.Write("Please enter the second number and press enter: ");
-                    string number2 = Console.ReadLine();
-
-                    SimpleCalculations calculate = new SimpleCalculations();
-                    double firstValue = calculate.FirstNumber(number1);
-                    double secondValue = calculate.SecondNumber(number2);
-                    string symbol = calculate.Operator(calcSymbol);
-                    calculate.Calculation(firstValue, secondValue, symbol);
+                        double secondValue = calculate.inputValidation(Console.ReadLine());
+                        
+                    Console.Write("Please enter the operator and press enter: ");
+                        string symbol = calculate.Operator(Console.ReadLine());
+                        calculate.simpleCalculation(firstValue, secondValue, symbol);
                 }
-                //I'm using option 2 for the second option on the menu
-                else if (option_2 == 2 && option_2 < 3 && option_2 > 0)
+                else if (menuOption == "2")
                 {
-                    SimpleCalculations calculate2 = new SimpleCalculations();
-                    double amount = calculate2.FirstNumber(number1);
-                    string rate = calculate2.TipType(tipRate);
-                    calculate2.TipCalculation(amount, rate);
+                    Console.Write("Please enter the bill amount and press enter: ");
+                        double billAmount = calculate.inputValidation(Console.ReadLine());
+                    
+                    Console.Write("Please enter the tip rate and press enter: ");
+                        string tipRate = calc.TipType(Console.ReadLine());
+                        calc.TipCalculation(billAmount, tipRate);
                 }
                 else
                 {
-                    Console.Write("Sorry, that's not an option ");
+                    Console.Write("Sorry, that's not an option" );
+                    Thread.Sleep(1500);
+                    Console.Clear();
                 }
                 
-                //I need to fix this Y or N choice
-                Console.Write("Do You Want To Try Again? Y/y or N/n: ");
-                status = Console.ReadKey();
-                if (status.Key != ConsoleKey.Y) break;
-                Console.WriteLine(status.Key);
-
-                Console.Clear();
+                Console.Write("Do you want to try again? Y/y or N/n ");
+                string tryAgain = calculate.exitValidation(Console.ReadLine());
+                if (tryAgain == "Y" || tryAgain == "y") Console.Clear();
+                    else if (tryAgain == "N" || tryAgain == "n")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Thank you for using my calculator, Good Bye!!");
+                    break;
+                }
+                else break;
             }
         }
     }
