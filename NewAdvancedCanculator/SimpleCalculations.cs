@@ -98,7 +98,7 @@ public class SimpleCalculations
                 Console.WriteLine($"Your Multiplication result is: {answer}");
                 break;
             default:
-                Console.WriteLine("Incorrect operator");
+                Console.WriteLine("That's not a correct option. Try again: ");
                 break;
         }
         return answer;

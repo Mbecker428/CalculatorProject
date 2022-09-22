@@ -39,6 +39,9 @@ namespace NewAdvancedCalculator
                         double secondValue = simple.inputValidation(Console.ReadLine());
                         
                     Console.Write("Please enter the operator and press enter: ");
+                    Console.Write(" + for addition, - for subtraction, * for multiplication ");
+                    Console.Write("or / for division: ");
+                    
                         string symbol = simple.Operator(Console.ReadLine());
                         simple.simpleCalculation(firstValue, secondValue, symbol);
                 }
@@ -47,7 +50,8 @@ namespace NewAdvancedCalculator
                     Console.Write("Please enter the bill amount and press enter: ");
                         double billAmount = simple.inputValidation(Console.ReadLine());
                     
-                    Console.Write("Please enter the tip rate and press enter: ");
+                    Console.Write("Please enter a tip rate (18%, 20%, 25%) and press enter: ");
+
                         string tipRate = advance.TipType(Console.ReadLine());
                         advance.TipCalculation(billAmount, tipRate);
                 }
@@ -58,7 +62,7 @@ namespace NewAdvancedCalculator
                     Console.Clear();
                 }
                 
-                Console.Write("Do you want to try again? Y/y or N/n ");
+                Console.Write("Do you want to perform another calculation? Y/y or N/n ");
                 string tryAgain = simple.exitValidation(Console.ReadLine());
                 if (tryAgain == "Y" || tryAgain == "y") Console.Clear();
                     else if (tryAgain == "N" || tryAgain == "n")
