@@ -5,7 +5,7 @@ namespace NewAdvancedCalculator;
 public class SimpleCalculations
 {
     //This method validates the number inputs
-    public double inputValidation(string value)
+    public double InputValidation(string value)
     {
         double j;
         while (!double.TryParse(value, out j))
@@ -17,7 +17,7 @@ public class SimpleCalculations
     }
 
     //This method validates the operators
-    public string Operator(string calcSymbol)
+    public string OperatorValidation(string calcSymbol)
     {
         bool dContinue = true;
         while (dContinue)
@@ -35,7 +35,7 @@ public class SimpleCalculations
     }
     
     //This method validates the menu choices
-    public string choiceValidation(string choice)
+    public string MenuChoiceValidation(string choice)
      {
          bool fContinue = true;
          while (fContinue)
@@ -53,7 +53,7 @@ public class SimpleCalculations
      }
     
     //This method validates the exit answer
-    public string exitValidation(string choice)
+    public string ExitValidation(string choice)
     {
         bool gContinue = true;
         while (gContinue)
@@ -71,7 +71,7 @@ public class SimpleCalculations
     }
 
     //This method calculates the simple operations
-    public double simpleCalculation(double num1, double num2, string calcSymbol)
+    public double SimpleCalculation(double num1, double num2, string calcSymbol)
     {
         double answer = 0;
         switch (calcSymbol)

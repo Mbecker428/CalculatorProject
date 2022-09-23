@@ -28,30 +28,29 @@ namespace NewAdvancedCalculator
                 SimpleCalculations simple = new SimpleCalculations();
                 AdvancedCalculations advance = new AdvancedCalculations();
                 
-                string menuOption = simple.choiceValidation(Console.ReadLine());
+                string menuOption = simple.MenuChoiceValidation(Console.ReadLine());
                 
                 if (menuOption == "1")
                 {
                     Console.Write("Please enter the first number and press enter: ");
-                        double firstValue = simple.inputValidation(Console.ReadLine());
+                        double firstValue = simple.InputValidation(Console.ReadLine());
                     
                     Console.Write("Please enter the second number and press enter: ");
-                        double secondValue = simple.inputValidation(Console.ReadLine());
+                        double secondValue = simple.InputValidation(Console.ReadLine());
                         
-                    Console.Write("Please enter the operator and press enter: ");
+                    Console.Write("Please enter the operator and press enter: \n");
                     Console.Write(" + for addition, - for subtraction, * for multiplication ");
                     Console.Write("or / for division: ");
                     
-                        string symbol = simple.Operator(Console.ReadLine());
-                        simple.simpleCalculation(firstValue, secondValue, symbol);
+                        string symbol = simple.OperatorValidation(Console.ReadLine());
+                        simple.SimpleCalculation(firstValue, secondValue, symbol);
                 }
                 else if (menuOption == "2")
                 {
                     Console.Write("Please enter the bill amount and press enter: ");
-                        double billAmount = simple.inputValidation(Console.ReadLine());
+                        double billAmount = simple.InputValidation(Console.ReadLine());
                     
                     Console.Write("Please enter a tip rate (18%, 20%, 25%) and press enter: ");
-
                         string tipRate = advance.TipType(Console.ReadLine());
                         advance.TipCalculation(billAmount, tipRate);
                 }
@@ -63,7 +62,7 @@ namespace NewAdvancedCalculator
                 }
                 
                 Console.Write("Do you want to perform another calculation? Y/y or N/n ");
-                string tryAgain = simple.exitValidation(Console.ReadLine());
+                string tryAgain = simple.ExitValidation(Console.ReadLine());
                 if (tryAgain == "Y" || tryAgain == "y") Console.Clear();
                     else if (tryAgain == "N" || tryAgain == "n")
                 {
