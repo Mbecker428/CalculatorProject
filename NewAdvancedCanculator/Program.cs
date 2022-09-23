@@ -27,6 +27,7 @@ namespace NewAdvancedCalculator
 
                 SimpleCalculations simple = new SimpleCalculations();
                 AdvancedCalculations advance = new AdvancedCalculations();
+                
                 string menuOption = simple.choiceValidation(Console.ReadLine());
                 
                 if (menuOption == "1")

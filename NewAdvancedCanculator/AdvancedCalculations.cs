@@ -35,18 +35,18 @@ public class AdvancedCalculations : SimpleCalculations
         {
             case "18%":
                 tipAmount = amount1 * .18;
-                Console.WriteLine($"Your tip amount is: {tipAmount}");
+                Console.WriteLine($"Your tip amount is: ${tipAmount}");
                 break;
             case "20%":
                 tipAmount = amount1 * .20;
-                Console.WriteLine($"Your tip amount is: {tipAmount}");
+                Console.WriteLine($"Your tip amount is: ${tipAmount}");
                 break;
             case "25%":
                 tipAmount = amount1 * .25;
-                Console.WriteLine($"Your tip amount is: {tipAmount}");
+                Console.WriteLine($"Your tip amount is: ${tipAmount}");
                 break;
             default:
-                Console.WriteLine("Incorrect percentage number");
+                Console.WriteLine("Incorrect percentage rate");
                 break;
         }
         return tipAmount;
