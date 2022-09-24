@@ -33,10 +33,10 @@ namespace NewAdvancedCalculator
                 if (menuOption == "1")
                 {
                     Console.Write("Please enter the first number and press enter: ");
-                        double firstValue = simple.InputValidation(Console.ReadLine());
+                        double firstValue = simple.BasicInputValidation(Console.ReadLine());
                     
                     Console.Write("Please enter the second number and press enter: ");
-                        double secondValue = simple.InputValidation(Console.ReadLine());
+                        double secondValue = simple.BasicInputValidation(Console.ReadLine());
                         
                     Console.Write("Please enter the operator and press enter: \n");
                     Console.Write(" + for addition, - for subtraction, * for multiplication ");
@@ -48,7 +48,7 @@ namespace NewAdvancedCalculator
                 else if (menuOption == "2")
                 {
                     Console.Write("Please enter the bill amount and press enter: ");
-                        double billAmount = simple.InputValidation(Console.ReadLine());
+                        double billAmount = simple.TipInputValidation(Console.ReadLine());
                     
                     Console.Write("Please enter a tip rate (18%, 20%, 25%) and press enter: ");
                         string tipRate = advance.TipType(Console.ReadLine());
