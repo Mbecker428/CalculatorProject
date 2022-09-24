@@ -39,7 +39,7 @@ namespace NewAdvancedCalculator
                         double secondValue = simple.BasicInputValidation(Console.ReadLine());
                         
                     Console.Write("Please enter the operator and press enter: \n");
-                    Console.Write(" + for addition, - for subtraction, * for multiplication ");
+                    Console.Write("+ for addition, - for subtraction, * for multiplication ");
                     Console.Write("or / for division: ");
                     
                         string symbol = simple.OperatorValidation(Console.ReadLine());

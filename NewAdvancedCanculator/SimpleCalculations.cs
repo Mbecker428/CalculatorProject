@@ -34,8 +34,6 @@ public class SimpleCalculations
         }
         return number;
     }
-    
-    
 
     //This method validates the operators
     public string OperatorValidation(string calcSymbol)
